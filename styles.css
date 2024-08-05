@@ -17,7 +17,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px;
+    padding: 20px 50px;
     background-color: transparent;
     display: flex;
     justify-content: space-between;
@@ -32,12 +32,17 @@ body {
     font-weight: 600;
 }
 
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
 .navbar a {
     font-size: 18px;
     color: #ededed;
     text-decoration: none;
     font-weight: 500;
-    margin-left: 35px;
     transition: .3s;
 }
 
@@ -51,9 +56,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
     padding: 0 10%;
-    gap: 20px;
 }
 
 .home-content {
@@ -82,8 +85,7 @@ body {
 
 .home-content .btn-box {
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+    gap: 15px;
 }
 
 .btn-box a {
@@ -140,11 +142,12 @@ body {
 }
 
 .home-img {
-    max-width: 600px;
+    max-width: 500px;
     flex: 1;
     margin-left: auto;
     display: flex;
     justify-content: center;
+    padding: 20px;
 }
 
 .home-img img {
@@ -199,9 +202,11 @@ body {
 }
 
 /* Media Queries */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .home {
         padding: 0 5%;
+        flex-direction: column;
+        text-align: center;
     }
     .home-content h1 {
         font-size: 40px;
@@ -209,22 +214,21 @@ body {
     .home-content h3 {
         font-size: 24px;
     }
-    .btn-box a {
-        width: 100%;
-        justify-content: center;
-    }
     .btn-box {
-        width: 100%;
         flex-direction: column;
+        gap: 10px;
+    }
+    .home-img {
+        margin-top: 20px;
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .header {
         flex-direction: column;
+        padding: 10px;
     }
     .navbar {
-        display: flex;
         flex-direction: column;
         align-items: center;
         gap: 10px;
@@ -237,5 +241,27 @@ body {
     }
     .home-content h3 {
         font-size: 20px;
+    }
+    .home-sci {
+        bottom: 20px;
+        width: 100%;
+        justify-content: center;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-content h1 {
+        font-size: 28px;
+    }
+    .home-content h3 {
+        font-size: 18px;
+    }
+    .home-content p {
+        font-size: 14px;
+    }
+    .btn-box a {
+        padding: 10px 20px;
+        font-size: 16px;
     }
 }
