@@ -214,6 +214,7 @@ body {
     }
     .home-content h1 {
         font-size: 40px;
+        white-space: normal; /* Revert white-space for small screens */
     }
     .home-content h3 {
         font-size: 24px;
@@ -282,5 +283,8 @@ body {
     .home-sci {
         bottom: 10px;
         flex-direction: row;
+        width: 100%;
+        justify-content: center;
+        gap: 15px;
     }
 }
