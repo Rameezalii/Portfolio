@@ -71,6 +71,7 @@ body {
     font-weight: 700;
     line-height: 1.2;
     color: #ededed;
+    white-space: nowrap; /* Ensures name stays on one line */
 }
 
 .home-content h3 {
@@ -254,8 +255,15 @@ body {
 }
 
 @media (max-width: 480px) {
+    .header {
+        padding: 20px 10px;
+    }
+    .navbar {
+        gap: 5px;
+    }
     .home-content h1 {
         font-size: 28px;
+        white-space: normal; /* Revert white-space for small screens */
     }
     .home-content h3 {
         font-size: 18px;
@@ -270,5 +278,9 @@ body {
     .home-img {
         max-width: 100%;
         margin-top: 20px;
+    }
+    .home-sci {
+        bottom: 10px;
+        flex-direction: row;
     }
 }
