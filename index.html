@@ -6,16 +6,32 @@
     <title>Rameez Ali Portfolio</title>
     <link rel="stylesheet" href="./styles.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        .home-content h1, .home-content h3, .home-content p, .btn-box, .home-img img, .home-sci {
+            animation: fadeInUp 2s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
 <body>
     <header class="header">
         <a href="#" class="logo">Rameez.</a>
         <nav class="navbar">
             <a href="#" class="active">Home</a>
-            <a href="#">About</a>
+            <a href="./about.html">About</a>
             <a href="#">Services</a>
             <a href="#">Portfolio</a>
-            <a href="#">Contact</a>
+            <a href="./contact.html">Contact</a>
         </nav>
     </header>
     <section class="home">
@@ -32,7 +48,7 @@
             <img src="sab.PNG" alt="Rameez Ali">
         </div>
         <div class="home-sci">
-            <a href="#"><i class='bx bxl-facebook'></i></a>
+            <a href="https://www.facebook.com/xtylish.rameez.3"><i class='bx bxl-facebook'></i></a>
             <a href="https://github.com/Rameezalii"><i class='bx bxl-github'></i></a>
             <a href="https://www.linkedin.com/in/rameez-ali-b98b522b2/"><i class='bx bxl-linkedin'></i></a>
         </div>
