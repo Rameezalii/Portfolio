@@ -1,14 +1,534 @@
-/* Default styles for desktop */
+/* Mobile Styles */
+
+/* Default Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
 body {
-    background-color: lightblue;
-    color: darkblue;
-  }
-  
-  /* Styles for mobile devices */
-  @media (max-width: 767px) {
-    body {
-      background-color: lightcoral;
-      color: white;
+    color: #ededed;
+    background-color: #081b29;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 50px;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    animation: slideDown 1s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
     }
-  }
-  
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.logo {
+    font-size: 25px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #00abf0;
+}
+
+/* Home Section */
+.home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+    flex-wrap: wrap;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.home-content {
+    max-width: 600px;
+    flex: 1 1 40%;
+    padding: 20px;
+}
+
+.home-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #ededed;
+    white-space: nowrap; /* Ensures name stays on one line */
+}
+
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #00abf0;
+}
+
+.home-content p {
+    font-size: 16px;
+    margin: 20px 0 40px;
+    color: #ededed;
+}
+
+.home-content .btn-box {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-box a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 30px;
+    background: #00abf0;
+    border: 2px solid #00abf0;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #081b29;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.btn-box a:hover {
+    color: #00abf0;
+}
+
+.btn-box a:nth-child(2) {
+    background: transparent;
+    color: #00abf0;
+}
+
+.btn-box a:nth-child(2):hover {
+    color: #081b29;
+}
+
+.btn-box a:nth-child(2)::before {
+    background: #00abf0;
+}
+
+.btn-box a:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #081b29;
+    z-index: -1;
+    transition: .5s;
+    overflow: hidden;
+}
+
+.btn-box a:hover::before {
+    width: 100%;
+}
+
+.home-img {
+    max-width: 500px;
+    flex: 1 1 40%;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.home-img img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.home-sci {
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-sci a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #00abf0;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #00abf0;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.home-sci a:hover {
+    color: #081b29;
+}
+
+.home-sci a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #00abf0;
+    z-index: -1;
+    transition: .5s;
+}
+
+.home-sci a:hover::before {
+    width: 100%;
+}
+
+/* About Section */
+.about, .contact {
+    padding: 100px 10%;
+    text-align: center;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.about-content, .contact-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-content h1, .contact-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    color: #00abf0;
+    margin-bottom: 20px;
+}
+
+.about-content p, .contact-content p {
+    font-size: 18px;
+    color: #ededed;
+    margin-bottom: 20px;
+}
+
+/* Contact Form Styles */
+form div {
+    margin-bottom: 15px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #ededed;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #00abf0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #007bbd;
+}
+
+.contact-content h1, form div, form button {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Services Section */
+.services {
+    padding: 100px 10%;
+    text-align: center;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.services-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.services-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    color: #00abf0;
+    margin-bottom: 20px;
+}
+
+.services-content p {
+    font-size: 18px;
+    color: #ededed;
+    margin-bottom: 40px;
+}
+
+.services-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.service-item {
+    background: #102a42;
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.service-item h3 {
+    font-size: 24px;
+    color: #00abf0;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 16px;
+    color: #ededed;
+}
+
+/* Portfolio Section */
+.portfolio {
+    padding: 100px 10%;
+    text-align: center;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.portfolio-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.portfolio-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    color: #00abf0;
+    margin-bottom: 20px;
+}
+
+.portfolio-content p {
+    font-size: 18px;
+    color: #ededed;
+    margin-bottom: 40px;
+}
+
+.portfolio-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.portfolio-item {
+    background: #102a42;
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    flex: 1 1 calc(33.333% - 40px);
+    max-width: calc(33.333% - 40px);
+    box-sizing: border-box;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-item img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.portfolio-item h3 {
+    font-size: 24px;
+    color: #00abf0;
+    margin-bottom: 10px;
+}
+
+.portfolio-item p {
+    font-size: 16px;
+    color: #ededed;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .home {
+        padding: 0 5%;
+        flex-direction: column;
+        text-align: center;
+    }
+    .home-content h1 {
+        font-size: 40px;
+        white-space: normal;
+    }
+    .home-content h3 {
+        font-size: 24px;
+    }
+    .btn-box {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .home-img {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .navbar a {
+        margin: 0;
+    }
+    .home-content h1 {
+        font-size: 32px;
+    }
+    .home-content h3 {
+        font-size: 20px;
+    }
+    .home-sci {
+        bottom: 20px;
+        width: 100%;
+        justify-content: center;
+        gap: 15px;
+    }
+    .about, .contact, .services, .portfolio {
+        padding: 80px 5%;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 20px 10px;
+    }
+    .navbar {
+        gap: 5px;
+    }
+    .home-content h1 {
+        font-size: 28px;
+        white-space: normal;
+    }
+    .home-content h3 {
+        font-size: 18px;
+    }
+    .home-content p {
+        font-size: 14px;
+    }
+    .btn-box a {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+    .home-img {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+    .home-sci {
+        bottom: 10px;
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+        gap: 15px;
+    }
+    .about-content, .contact-content, .services-content, .portfolio-content {
+        padding: 60px 5%;
+    }
+    .portfolio-item {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 360px) {
+    .portfolio-item {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* General styles for smooth scrolling and animations */
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Styles for section animation when they become visible */
+section.active {
+    opacity: 1;
+    transform: translateY(0);
+}
