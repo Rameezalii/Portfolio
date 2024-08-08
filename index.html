@@ -6,27 +6,75 @@
     <title>Rameez Ali Portfolio</title>
     <link rel="stylesheet" href="./styles.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./mobile.css" media="(max-width: 767px)">
+    <style>
+        /* Styles from about.html */
+        .about-content {
+            animation: fadeIn 2s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Styles from services.html */
+        .services-content h1, .services-content p, .service-item {
+            animation: fadeInUp 2s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Styles from portfolio.html */
+        .portfolio-content h1, .portfolio-content p, .portfolio-item {
+            animation: fadeInUp 2s ease-out;
+        }
+
+        /* Styles from contact.html */
+        .contact-content h1, form div, form button {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s, transform 0.5s;
+        }
+    </style>
 </head>
 <body>
     <header class="header">
         <a href="#" class="logo">Rameez.</a>
         <nav class="navbar">
             <a href="./index.html" class="active">Home</a>
-            <a href="./about.html">About</a>
-            <a href="./services.html">Services</a>
-            <a href="./portfolio.html">Portfolio</a>
-            <a href="./contact.html">Contact</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
+
+    <!-- Home Section -->
     <section class="home">
         <div class="home-content">
             <h1>Hi, I'm Rameez Ali</h1>
-            <h3>Frontend Developer</h3>
-            <p>Hello! I'm Rameez Ali, a passionate and creative frontend developer. I specialize in building beautiful, responsive, and user-friendly websites that bring your ideas to life. With a keen eye for design and a knack for coding, I blend aesthetics with functionality to create seamless digital experiences.</p>
+            <h3>Generative AI And Frontend Developer</h3>
+            <p>Hello! I'm Rameez Ali, a passionate and creative generative AI and frontend developer. I specialize in creating innovative AI solutions and building beautiful, responsive, and user-friendly websites that bring your ideas to life. With a deep understanding of AI, a keen eye for design, and a knack for coding, I blend intelligence with aesthetics to create seamless digital experiences.</p>
 
             <div class="btn-box">
-                <a href="./contact.html">Hire Me</a>
-                <a href="./contact.html">Let's Talk</a>
+                <a href="#contact">Hire Me</a>
+                <a href="#contact">Let's Talk</a>
             </div>
         </div>
         <div class="home-img">
@@ -38,5 +86,92 @@
             <a href="https://www.linkedin.com/in/rameez-ali-b98b522b2/"><i class='bx bxl-linkedin'></i></a>
         </div>
     </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-content">
+            <h1>About Me</h1>
+            <p>Hello! I'm Rameez Ali, and I'm excited to share my expertise with you. As a dedicated Generative AI and Frontend Developer, my journey started with a simple
+                 "Hello, World!" and has grown into a deep exploration of AI innovation and web development. I create intelligent solutions powered by AI while also crafting stunning visual designs and engaging user interactions. From AI-driven enhancements to intricate CSS animations and dynamic JavaScript features, I blend creativity with precision to deliver seamless, impactful experiences. I stay at the forefront of the latest trends, whether in generative AI or frontend development, 
+                 and I'm committed to bringing innovation and excellence to every project. Explore my portfolio to see the fusion of my passion and skills. Let's connect and push the boundaries of what's possible together!</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="services-content">
+            <h1>My Services</h1>
+            <p>I offer a range of services tailored to meet the needs of businesses and individuals looking to establish a strong online presence. With expertise in web development, UI/UX design, and SEO optimization, I ensure that your digital footprint is both effective and engaging.</p>
+            <div class="services-list">
+                <div class="service-item">
+                    <h3>Web Development</h3>
+                    <p>Creating responsive and dynamic websites that cater to your business needs and ensure a seamless user experience across all devices.</p>
+                </div>
+                <div class="service-item">
+                    <h3>UI/UX Design</h3>
+                    <p>Designing user-friendly interfaces and experiences that enhance user engagement and satisfaction, making your website both attractive and easy to navigate.</p>
+                </div>
+                <div class="service-item">
+                    <h3>SEO Optimization</h3>
+                    <p>Improving search engine rankings and visibility through strategic SEO practices, ensuring your website reaches a wider audience and drives more traffic.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="portfolio-content">
+            <h1>My Portfolio</h1>
+            <p>Take a look at some of the projects I have worked on. Each project showcases my skills in web development, design, and optimization, and reflects my commitment to delivering high-quality results for my clients.</p>
+            <div class="portfolio-gallery">
+                <div class="portfolio-item">
+                    <img src="project1.jpg" alt="Project 1">
+                    <h3>E-commerce Website</h3>
+                    <p>A fully functional e-commerce platform with features like product listings, shopping cart, and secure checkout.</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="project2.jpg" alt="Project 2">
+                    <h3>Business Website</h3>
+                    <p>A professional business website designed to enhance brand presence and provide essential information to customers.</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="project3.jpg" alt="Project 3">
+                    <h3>Personal Blog</h3>
+                    <p>A personal blog with a clean, modern design and easy-to-use content management features.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="contact-content">
+            <h1>Contact Me</h1>
+            <form
+            action="https://formspree.io/f/mnnavjvl"
+            method="POST"
+          >
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="./script.js"></script>
+   
+   
+    
 </body>
 </html>

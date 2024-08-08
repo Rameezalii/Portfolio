@@ -24,6 +24,18 @@ body {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    animation: slideDown 1s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .logo {
@@ -60,6 +72,7 @@ body {
     justify-content: space-between;
     padding: 0 10%;
     flex-wrap: wrap;
+    animation: fadeIn 1.5s ease-out;
 }
 
 .home-content {
@@ -211,6 +224,7 @@ body {
 .about, .contact {
     padding: 100px 10%;
     text-align: center;
+    animation: fadeIn 1.5s ease-out;
 }
 
 .about-content, .contact-content {
@@ -276,6 +290,7 @@ form button:hover {
 .services {
     padding: 100px 10%;
     text-align: center;
+    animation: fadeIn 1.5s ease-out;
 }
 
 .services-content {
@@ -329,6 +344,7 @@ form button:hover {
 .portfolio {
     padding: 100px 10%;
     text-align: center;
+    animation: fadeIn 1.5s ease-out;
 }
 
 .portfolio-content {
@@ -488,3 +504,36 @@ form button:hover {
         max-width: 100%;
     }
 }
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* General styles for smooth scrolling and animations */
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Styles for section animation when they become visible */
+section.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+
+

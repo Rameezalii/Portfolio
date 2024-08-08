@@ -1,0 +1,14 @@
+/* Default styles for desktop */
+body {
+    background-color: lightblue;
+    color: darkblue;
+  }
+  
+  /* Styles for mobile devices */
+  @media (max-width: 767px) {
+    body {
+      background-color: lightcoral;
+      color: white;
+    }
+  }
+  
