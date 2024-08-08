@@ -56,6 +56,3 @@ window.addEventListener('scroll', checkSectionInView); // Check on scroll
 
 
 
-document.querySelector('.menu-button').addEventListener('click', () => {
-    document.querySelector('.sidebar-menu').classList.toggle('active');
-});
